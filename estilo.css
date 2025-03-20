@@ -9,7 +9,7 @@
 
 html{
     scroll-behavior: smooth;
-
+    
 }
 .contenedor-header{
     
@@ -17,8 +17,7 @@ html{
     width: 100%;
     z-index: 99;
     top: 0;
-    left: 0;
-    justify-content: space-between;    
+    left: 0;       
     background: #1e2326;
     
 }
@@ -60,7 +59,7 @@ html{
     
 }
 
-.nav-rersponsive{
+.nav-responsive{
     display: none;
     background-color: #1CB698;
     padding: 5px 10px;
@@ -381,7 +380,7 @@ html{
 
 .skills .skill .adaptabilidad{
     width: 0%;
-    animation: 2s adatabilidad forwards;
+    animation: 2s adaptabilidad forwards;
 }
 @keyframes adaptabilidad{
     0%{
@@ -412,7 +411,7 @@ html{
         width: 0%;
     }
     100%{
-        width: 75%;
+        width: 80%;
     }
 }
 
@@ -706,7 +705,98 @@ html{
 }
 
 
+footer{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 80px 0 60x 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
 
+}
+footer{
+    
+    padding: 10px 10px;
+}
 
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;    
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 60px 5px;
+    font-size: 20px;
+    transition:0.5s ;
 
+}
 
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1CB698;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+@media screen and (max-width:700px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        width: 100%;
+    }
+    .skills .fila .col .barra-skill{
+        width: 100%;
+    }
+
+    .curriculum .fila{
+        display: block;
+    }
+    .curriculum .fila .col{
+        width: 90%;
+    }
+    .curriculum .fila .derecha{
+        margin-left: 20px;
+    }
+}
