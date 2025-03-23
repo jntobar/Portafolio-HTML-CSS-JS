@@ -35,3 +35,24 @@ function efectoHabilidades(){
 window.onscroll=function(){
     efectoHabilidades();
 }
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+document.getElementById("descargarCV").addEventListener("click", function() {
+    // Crea un enlace temporal
+    const enlace = document.createElement("a");
+    enlace.href = "doc/CV-johntobar.pdf"; // Ruta del archivo
+    enlace.download = "CV-johntobar.pdf"; // Nombre del archivo descargado
+    document.body.appendChild(enlace); // Agrega el enlace al documento
+    enlace.click(); // Simula el clic en el enlace
+    document.body.removeChild(enlace); // Elimina el enlace del DOM
+});
+
